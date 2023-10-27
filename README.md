@@ -41,8 +41,8 @@
 
 ## 三、项目打包发布 docker 启动
 
-- 运行 `mvn clean install` 将项目打包成jar包
-- 讲 `jar包` 及 `Dockerfile` 文件上传至服务器
+- 运行 `mvn clean install` 将项目打包成jar包（可直接从Releases下载）
+- 将 `jar包` 及 `Dockerfile` 文件上传至服务器
 - 执行docker构建镜像命令 `docker build -t jance-ql-api .`
 - docker执行：`docker run -d -it -p 9833:9833 -m 256m --name jance-ql-api jance-ql-api`
 - 跟踪查看日志：`docker logs -f jance-ql-api`
