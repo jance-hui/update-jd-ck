@@ -18,6 +18,7 @@
 - 5.修改快捷指令③，第二个url展开，`qlAddr`换成你的青龙地址`http://你的青龙IP:5700`；`clientId`使用青龙面板中添加的应用id；`clientSecret`使用青龙面板中添加的应用密钥
 - 6.alook浏览器获取全部ck后，直接执行此快捷指令即可。
 
+Alook浏览器获取ck教程：https://blog.csdn.net/weixin_44011530/article/details/130943930
 注：如不执行3、4，需保证`qlAddr`可在公网访问（最好是国内服务器，外网不保证能不能通）
 
 ## 3、如何发现ck失效？
