@@ -17,7 +17,7 @@
 - 接口调用方式`post`
 - 接口调用url实例：`http://xxx.xxx.xxx.xxx:9833/v1/getJdCk/getCk` （具体地址及端口以部署的docker服务为准）
 ``` json
-## 请求参数
+// 请求参数
 {
     'ck': '提取的所有cookies'
 }
@@ -29,7 +29,7 @@
 - 接口调用方式`post`
 - 接口调用url实例：`http://xxx.xxx.xxx.xxx:9833/v1/ql/updateJdCk` （具体地址及端口以部署的docker服务为准）
 ``` json
-## 请求参数
+// 请求参数
 {
     'qlAddr': '青龙应用地址，实例 http://127.0.0.1:5700',
     'clientId': '青龙应用id，实例 213hdsald-n',
