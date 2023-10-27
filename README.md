@@ -16,10 +16,10 @@
 - 根据alook浏览器中提取的所有cookies，获取需要的jdck（pt_key=xxx; pt_pin=xxx;）
 - 接口调用方式`post`
 - 接口调用url实例：`http://xxx.xxx.xxx.xxx:9833/v1/getJdCk/getCk` （具体地址及端口以部署的docker服务为准）
+- 请求参数如下：
 ``` json
-// 请求参数
 {
-    'ck': '提取的所有cookies'
+    "ck": "提取的所有cookies"
 }
 ```
 
@@ -28,13 +28,13 @@
 - 根据前面接口提取的jdck（pt_key=xxx; pt_pin=xxx;）更新环境变量（也可自己手工提取）
 - 接口调用方式`post`
 - 接口调用url实例：`http://xxx.xxx.xxx.xxx:9833/v1/ql/updateJdCk` （具体地址及端口以部署的docker服务为准）
+- 请求参数如下：
 ``` json
-// 请求参数
 {
-    'qlAddr': '青龙应用地址，实例 http://127.0.0.1:5700',
-    'clientId': '青龙应用id，实例 213hdsald-n',
-    'clientSecret': '青龙应用密钥，实例 213hdeqweqsald-n',
-    'ck': '京东ck（pt_key=xxx; pt_pin=xxx;）'
+    "qlAddr": "青龙应用地址，实例 http://127.0.0.1:5700",
+    "clientId": "青龙应用id，实例 213hdsald-n",
+    "clientSecret": "青龙应用密钥，实例 213hdeqweqsald-n",
+    "ck": "京东ck（pt_key=xxx; pt_pin=xxx;）"
 }
 ```
 注：ck环境变量需备注为`pt_pin=xxx`，代码自动识别所有环境变量中是否有此备注的ck，有则更新、无则新增
