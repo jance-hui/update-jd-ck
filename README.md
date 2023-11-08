@@ -6,7 +6,7 @@
 ## 1、DockerHub直接使用
 
 - 拉取镜像：`docker pull jancehui/update-jd-ck:1.0`
-- docker运行：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:1.0`
+- docker运行（amd架构）：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:1.0`
 - docker运行（arm架构-未测试过）：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:arm64-v8`
 - 跟踪查看日志：`docker logs -f update-jd-ck`
 
