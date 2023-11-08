@@ -70,14 +70,14 @@ public class QlController {
         // 5.新增/更新环境变量（已有pt_pin更新，没有pt_pin新增）
         for (int i = 0; i < jdCKList.size(); i++) {
             JSONObject object = jdCKList.getJSONObject(i);
-            String remarks = object.getString("remarks");
-            if (remarks.equals(pt_pin)) {
+            String value = object.getString("value");
+            if (value.contains(pt_pin)) {
                 // 已有pt_pin更新
                 JSONObject envInfo = new JSONObject();
                 envInfo.put("id", object.getString("id"));
                 envInfo.put("name", object.getString("name"));
                 envInfo.put("value", newCk);
-                envInfo.put("remarks", pt_pin);
+                envInfo.put("remarks", object.getString("remarks"));
                 QlUtils.updateEnv(auth, qlAddr, envInfo);
                 log.info("更新ck成功");
 
