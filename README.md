@@ -5,9 +5,8 @@
 
 ## 1、DockerHub直接使用
 
-- 拉取镜像：`docker pull jancehui/update-jd-ck:1.0`
-- docker运行（amd架构）：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:1.0`
-- docker运行（arm架构-未测试过）：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:arm64-v8`
+- docker运行（x86架构）：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:1.1`
+- docker运行（arm架构-未测试过）：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:arm64-v8-1.1`
 - 跟踪查看日志：`docker logs -f update-jd-ck`
 
 
@@ -63,7 +62,7 @@ Alook浏览器获取ck教程：https://blog.csdn.net/weixin_44011530/article/det
     "ck": "京东ck（pt_key=xxx; pt_pin=xxx;）"
 }
 ```
-注：ck环境变量需备注为`pt_pin=xxx`，代码自动识别所有环境变量中是否有此备注的ck，有则更新、无则新增
+~~注：ck环境变量需备注为`pt_pin=xxx`，代码自动识别所有环境变量中是否有此备注的ck，有则更新、无则新增~~  已调整为通过环境变量值中是否包含`pt_pin=xxx`判断更新还是新增
 
 ## 2、项目打包发布 docker 启动
 
