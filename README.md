@@ -2,14 +2,12 @@
 
 当前主要用于更新青龙面板上的jdck
 
-**打包镜像不支持arm架构，arm架构机器若要启动，建议手动安装jdk环境，并手动运行jar包**
-
-**运行命令`nohup java -jar -Dserver.port=9833 /具体路径/app.jar >> /具体路径/api.log 2>&1 &`**
 
 ## 1、DockerHub直接使用
 
 - 拉取镜像：`docker pull jancehui/update-jd-ck:1.0`
 - docker运行：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:1.0`
+- docker运行（arm架构-未测试过）：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck jancehui/update-jd-ck:arm64-v8`
 - 跟踪查看日志：`docker logs -f update-jd-ck`
 
 
