@@ -69,6 +69,6 @@ Alook浏览器获取ck教程：https://blog.csdn.net/weixin_44011530/article/det
 - 运行 `mvn clean install` 将项目打包成jar包（可直接从Releases下载）
 - 将 `jar包` 及 `Dockerfile` 文件上传至服务器
 - 执行docker构建镜像命令 `docker build -t update-jd-ck .`
-- docker执行：`docker run -d -it -p 9833:9833 -m 256m --name update-jd-ck update-jd-ck`
+- docker执行：`docker run -d -it -p 9833:9833 --name update-jd-ck update-jd-ck`
 - 跟踪查看日志：`docker logs -f update-jd-ck`
 
