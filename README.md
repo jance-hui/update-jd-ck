@@ -1,6 +1,7 @@
 # 一、简介
 
-当前主要用于更新青龙面板上的jdck
+苹果手机端轻松实现更新青龙面板上的jdck。
+需要Alook浏览器（也可以是其他的浏览器，只要能获取cookie就行），
 
 
 ## 1、DockerHub直接使用
@@ -14,19 +15,17 @@
 
 - 1.下载 `alook浏览器` 6块大洋，或者在网上找共享账号下载
 - 2.导入快捷指令 `https://www.icloud.com/shortcuts/77486ad4edeb4382bd0a21d82cab065c`
-- 3.【可选】修改快捷指令①，第一个url地址`http://api.jancehui.top/xxxxx/getCk`可换成自己的`http://你的IP:9833/xxxxx/getCk`
-- 4.【可选】修改快捷指令②，第二个url地址`http://api.jancehui.top/xxxxx/updateJdCk`同样可换成自己的`http://你的IP:9833/xxxxx/updateJdCk`
+- 3.修改快捷指令①，第一个url地址`http://api.jancehui.top/xxxxx/getCk`可换成自己的`http://你的IP:9833/xxxxx/getCk` （原域名到期了）
+- 4.修改快捷指令②，第二个url地址`http://api.jancehui.top/xxxxx/updateJdCk`同样可换成自己的`http://你的IP:9833/xxxxx/updateJdCk` （原域名到期了）
 - 5.修改快捷指令③，第二个url展开，`qlAddr`换成你的青龙地址`http://你的青龙IP:5700`；`clientId`使用青龙面板中添加的应用id；`clientSecret`使用青龙面板中添加的应用密钥
 - 6.alook浏览器获取全部ck后，直接执行此快捷指令即可。
 
 Alook浏览器获取ck教程：https://blog.csdn.net/weixin_44011530/article/details/130943930
 
-注：如不执行3、4，需保证`qlAddr`可在公网访问（最好是国内服务器，外网不保证能不能通）
-
 ## 3、如何发现ck失效？
 
 - 1.faker库有`ck检测`脚本，如果ck失效后会自动将环境变量禁用，并发送通知（接口已支持更新ck后，自动启用）
-- 2.晚上11点左右打开jd看一下，不需要重新登录就是没有失效
+- 2.~~晚上11点左右~~ 早上打开jd看一下，不需要重新登录就是没有失效（现在差不多就是3天一掉）
 
 # 二、项目介绍
 
